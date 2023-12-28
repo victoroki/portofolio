@@ -1,0 +1,52 @@
+[
+  {
+    "name": "React Weather App",
+    "desc": "Real-time weather updates and forecasts presented in an intuitive React-based application.",
+    "image": "weather",
+    "category": "android",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/weather-app-1"
+    }
+  },
+  {
+    "name": "Inventory Management System",
+    "desc": ": Efficient PHP system for tracking and managing inventory levels and details.",
+    "image": "inventory",
+    "category": "php",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/KPLC_Inventory_system"
+    }
+  },
+  {
+    "name": "E-commerce Website in PHP",
+    "desc": " Feature-rich PHP-based platform for seamless online shopping experiences.",
+    "image": "electronics",
+    "category": "php",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/AntonnyM/gadgets"
+    }
+  },
+  {
+    "name": "Blog Post in Laravel",
+    "desc": "Sophisticated blogging application developed in Laravel for easy content creation and management",
+    "image": "blog-post",
+    "category": "laravel",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/laravel_project_app"
+    }
+  },
+  {
+    "name": "Airbnb clone",
+    "desc": "A React-powered platform mirroring Airbnb's functionalities, offering users a seamless experience in searching, booking, and managing accommodations.",
+    "image": "airbnb",
+    "category": "react",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/bh"
+    }
+  }
+]
