@@ -48,5 +48,36 @@
       "view": "#",
       "code": "https://github.com/victoroki/bh"
     }
-  }
-]
+  },
+    {
+      "name": "Wordmaster Game",
+      "desc": "A React-powered word game project.",
+      "image": "wordmaster",
+      "category": "react",
+      "links": {
+        "view": "#",
+        "code": "https://github.com/victoroki/wordMasterGame"
+      }
+    },
+    {
+      "name": "Bargraph Chart",
+      "desc": "A React-powered project showcasing a bar graph chart.",
+      "image": "bargraph",
+      "category": "react",
+      "links": {
+        "view": "#",
+        "code": "https://github.com/victoroki/bargraphchart"
+      }
+    },
+    {
+      "name": "News Homepage",
+      "desc": "A React-powered project displaying a news homepage.",
+      "image": "newshomepage",
+      "category": "react",
+      "links": {
+        "view": "#",
+        "code": "https://github.com/victoroki/newsHomepage"
+      }
+    }
+  ]
+  
