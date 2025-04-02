@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -20,7 +19,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Jigar Sable";
+            document.title = "Projects | Portfolio Victor Mongare";
             $("#favicon").attr("href", "/assets/images/favicon.png");
         }
         else {
@@ -29,6 +28,31 @@ document.addEventListener('visibilitychange',
         }
     });
 
+// Project Modal functionality
+const modal = document.getElementById("projectModal");
+const modalImg = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalCodeLink = document.getElementById("modalCodeLink");
+const closeModal = document.querySelector(".close-modal");
+
+function openModal(imgSrc, title, desc, codeLink) {
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modalCodeLink.href = codeLink;
+}
+
+closeModal.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 // fetch projects start
 function getProjects() {
@@ -39,65 +63,64 @@ function getProjects() {
         });
 }
 
-
 function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
+    
     projects.forEach(project => {
         projectsHTML += `
         <div class="grid-item ${project.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <div class="box tilt">
+            <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+            <div class="content">
+              <div class="tag">
+                <h3>${project.name}</h3>
+              </div>
+              <div class="desc">
+                <p>${project.desc}</p>
+                <div class="btns">
+                  <a href="#" class="btn view-btn" data-img="/assets/images/projects/${project.image}.png" 
+                     data-title="${project.name}" data-desc="${project.desc}" 
+                     data-code="${project.links.code}">
+                    <i class="fas fa-eye"></i> View
+                  </a>
+                  <a href="${project.links.code}" class="btn" target="_blank">
+                    Code <i class="fas fa-code"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    </div>`
+        </div>`;
     });
+    
     projectsContainer.innerHTML = projectsHTML;
 
-    // vanilla tilt.js
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    //     max: 20,
-    // });
-    // // vanilla tilt.js  
-
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
-    // const srtop = ScrollReveal({
-    //     origin: 'bottom',
-    //     distance: '80px',
-    //     duration: 1000,
-    //     reset: true
-    // });
-
-    // /* SCROLL PROJECTS */
-    // srtop.reveal('.work .box', { interval: 200 });
-
-    // isotope filter products
+    // Initialize Isotope after projects are loaded
     var $grid = $('.box-container').isotope({
         itemSelector: '.grid-item',
         layoutMode: 'fitRows',
+        percentPosition: true,
         masonry: {
-            columnWidth: 200
+            columnWidth: '.grid-item'
         }
     });
 
-    // filter items on button click
-    $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
+    // Filter items on button click
+    $('.button-group').on('click', 'button', function() {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
     });
+
+    // Add active class to buttons
+    $('.button-group').each(function(i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
+        });
+    });
+
 }
 
 getProjects().then(data => {

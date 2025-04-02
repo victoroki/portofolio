@@ -1,17 +1,7 @@
 [
   {
-    "name": "React Weather App",
-    "desc": "Real-time weather updates and forecasts presented in an intuitive React-based application.",
-    "image": "weather",
-    "category": "android",
-    "links": {
-      "view": "#",
-      "code": "https://github.com/victoroki/weather-app-1"
-    }
-  },
-  {
     "name": "Inventory Management System",
-    "desc": ": Efficient PHP system for tracking and managing inventory levels and details.",
+    "desc": "Efficient PHP system for tracking and managing inventory levels and details.",
     "image": "inventory",
     "category": "php",
     "links": {
@@ -21,8 +11,8 @@
   },
   {
     "name": "E-commerce Website in PHP",
-    "desc": " Feature-rich PHP-based platform for seamless online shopping experiences.",
-    "image": "electronics",
+    "desc": "Feature-rich PHP-based platform for seamless online shopping experiences.",
+    "image": "ecommerce-php",
     "category": "php",
     "links": {
       "view": "#",
@@ -31,7 +21,7 @@
   },
   {
     "name": "Blog Post in Laravel",
-    "desc": "Sophisticated blogging application developed in Laravel for easy content creation and management",
+    "desc": "Sophisticated blogging application developed in Laravel for easy content creation and management.",
     "image": "blog-post",
     "category": "laravel",
     "links": {
@@ -40,7 +30,37 @@
     }
   },
   {
-    "name": "Airbnb clone",
+    "name": "Laravel E-commerce Platform",
+    "desc": "A fully functional e-commerce system built with Laravel for scalable online stores.",
+    "image": "ecommerce-2",
+    "category": "laravel",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/laravel-ecommerce"
+    }
+  },
+  {
+    "name": "Python ML Plant Disease Prediction",
+    "desc": "Machine learning model developed in Python for detecting plant diseases from images.",
+    "image": "plant-prediction",
+    "category": "python",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/plant-disease-prediction"
+    }
+  },
+  {
+    "name": "Hadria E-commerce Website",
+    "desc": "A complete e-commerce website built with modern web technologies for a seamless shopping experience.",
+    "image": "hadria-i",
+    "category": "ecommerce",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/hadria-ecommerce"
+    }
+  },
+  {
+    "name": "Airbnb Clone",
     "desc": "A React-powered platform mirroring Airbnb's functionalities, offering users a seamless experience in searching, booking, and managing accommodations.",
     "image": "airbnb",
     "category": "react",
@@ -49,35 +69,34 @@
       "code": "https://github.com/victoroki/bh"
     }
   },
-    {
-      "name": "Wordmaster Game",
-      "desc": "A React-powered word game project.",
-      "image": "wordmaster",
-      "category": "react",
-      "links": {
-        "view": "#",
-        "code": "https://github.com/victoroki/wordMasterGame"
-      }
-    },
-    {
-      "name": "Bargraph Chart",
-      "desc": "A React-powered project showcasing a bar graph chart.",
-      "image": "bargraph",
-      "category": "react",
-      "links": {
-        "view": "#",
-        "code": "https://github.com/victoroki/bargraphchart"
-      }
-    },
-    {
-      "name": "News Homepage",
-      "desc": "A React-powered project displaying a news homepage.",
-      "image": "newshomepage",
-      "category": "react",
-      "links": {
-        "view": "#",
-        "code": "https://github.com/victoroki/newsHomepage"
-      }
+  {
+    "name": "Wordmaster Game",
+    "desc": "A React-powered word game project.",
+    "image": "wordmaster",
+    "category": "react",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/wordMasterGame"
     }
-  ]
-  
+  },
+  {
+    "name": "Bargraph Chart",
+    "desc": "A React-powered project showcasing a bar graph chart.",
+    "image": "bargraph",
+    "category": "react",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/bargraphchart"
+    }
+  },
+  {
+    "name": "News Homepage",
+    "desc": "A React-powered project displaying a news homepage.",
+    "image": "newshomepage",
+    "category": "basic-web",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/newsHomepage"
+    }
+  }
+]
