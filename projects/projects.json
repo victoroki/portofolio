@@ -45,7 +45,7 @@
     "image": "plant-prediction",
     "category": "python",
     "links": {
-      "view": "#",
+      "view": "https://plant-diseases-prediction.onrender.com/",
       "code": "https://github.com/victoroki/plant-disease-prediction"
     }
   },
