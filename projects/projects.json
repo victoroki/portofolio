@@ -1,5 +1,75 @@
 [
   {
+    "name": "MPESA Spending Analyzer App",
+    "desc": "Mobile app that scans your MPESA messages, tracks usage, analyzes spending patterns, and provides personalized advice.",
+    "image": "mpesa",
+    "category": "mobile",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/MPESAAnalyzer.git"
+    }
+  },
+  {
+    "name": "Ocean Climate Hub Website",
+    "desc": "Informative and interactive website focused on ocean climate research and initiatives.",
+    "image": "oceanclimate",
+    "category": "web",
+    "links": {
+      "view": "https://oceanclimatehub.com",
+      "code": "https://github.com/victoroki/ocean-climate.git"
+    }
+  },
+  {
+    "name": "Torchbearer Technologies Website",
+    "desc": "Corporate website showcasing Torchbearer Technologies’ solutions and services.",
+    "image": "torchbearertech",
+    "category": "web",
+    "links": {
+      "view": "https://torchbearer.co.ke",
+      "code": "https://github.com/victoroki/laravel-torchbearer.git"
+    }
+  },
+  {
+    "name": "Torchbearer Institute Website",
+    "desc": "Educational website for Torchbearer Institute, featuring programs, courses, and events.",
+    "image": "torchbearerinsitute",
+    "category": "web",
+    "links": {
+      "view": "https://torchbearer.co.ke/institute",
+      "code": "https://github.com/victoroki/laravel-torchbearer.git"
+    }
+  },
+  {
+    "name": "REMA Agritech Website",
+    "desc": "Website for REMA Agritech to showcase agriculture technology solutions and services.",
+    "image": "remaagritech",
+    "category": "web",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/rema-agritech.git"
+    }
+  },
+  {
+    "name": "Garikon Website",
+    "desc": "Official website for Garikon, presenting your company’s portfolio, services, and solutions.",
+    "image": "garikon",
+    "category": "web",
+    "links": {
+      "view": "https://garikon.com",
+      "code": "https://github.com/victoroki/garikon.git"
+    }
+  },
+  {
+    "name": "Kenstane Energy Website",
+    "desc": "Website for Kenstane Energy, showcasing renewable energy solutions and projects.",
+    "image": "kenstane",
+    "category": "web",
+    "links": {
+      "view": "https://kenstane.vercel.app",
+      "code": "https://github.com/victoroki/kenstane"
+    }
+  },
+  {
     "name": "Inventory Management System",
     "desc": "Efficient PHP system for tracking and managing inventory levels and details.",
     "image": "inventory",
@@ -97,6 +167,56 @@
     "links": {
       "view": "#",
       "code": "https://github.com/victoroki/newsHomepage"
+    }
+  },
+  {
+    "name": "M-Pesa Expense Tracker",
+    "desc": "An intelligent mobile application that scans M-Pesa SMS messages to track spending habits, analyze usage patterns, and provide personalized financial advice.",
+    "image": "mpesa-tracker",
+    "category": "python",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/victoroki/MPESAAnalyzer.git"
+    }
+  },
+  {
+    "name": "Ocean Climate Hub",
+    "desc": "A digital platform dedicated to advancing ocean-based climate solutions, empowering communities, and fostering a sustainable blue economy.",
+    "image": "ocean-climate",
+    "category": "basic-web",
+    "links": {
+      "view": "https://oceanclimatehub.com/",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Torchbearer Technologies",
+    "desc": "A comprehensive website for a leading provider of solar, CCTV, electrical, and HVAC solutions, showcasing innovative green energy services.",
+    "image": "torchbearer-tech",
+    "category": "basic-web",
+    "links": {
+      "view": "https://torchbearer.co.ke/",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Torchbearer Institute of Technology",
+    "desc": "An educational platform for technical training in renewable energy, solar PV installation, and electrical wiring, empowering the next generation of technicians.",
+    "image": "torchbearer-inst",
+    "category": "basic-web",
+    "links": {
+      "view": "https://torchbearer.co.ke/",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Rema Agritech",
+    "desc": "A web presence for an innovative agritech company specializing in multistorey gardens and sustainable agricultural solutions for modern farmers.",
+    "image": "rema-agritech",
+    "category": "basic-web",
+    "links": {
+      "view": "#",
+      "code": "#"
     }
   }
 ]

@@ -34,6 +34,7 @@ const modalImg = document.getElementById("modalImage");
 const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDesc");
 const modalCodeLink = document.getElementById("modalCodeLink");
+const notDeployedMsg = document.getElementById("notDeployedMsg");
 const closeModal = document.querySelector(".close-modal");
 
 function openModal(imgSrc, title, desc, codeLink) {
@@ -41,14 +42,24 @@ function openModal(imgSrc, title, desc, codeLink) {
     modalImg.src = imgSrc;
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
-    modalCodeLink.href = codeLink;
+
+    // Show/hide code link based on availability
+    if (codeLink && codeLink !== "#") {
+        modalCodeLink.href = codeLink;
+        modalCodeLink.style.display = "inline-block";
+    } else {
+        modalCodeLink.style.display = "none";
+    }
+
+    // Always show "not deployed" message in modal since it only opens for non-live projects
+    notDeployedMsg.style.display = "block";
 }
 
-closeModal.onclick = function() {
+closeModal.onclick = function () {
     modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
@@ -59,15 +70,45 @@ function getProjects() {
     return fetch("projects.json")
         .then(response => response.json())
         .then(data => {
-            return data
+            // Sort projects: those with actual view links (not "#") come first
+            return data.sort((a, b) => {
+                const aHasLink = a.links.view !== "#";
+                const bHasLink = b.links.view !== "#";
+
+                if (aHasLink && !bHasLink) return -1;
+                if (!aHasLink && bHasLink) return 1;
+                return 0;
+            });
         });
 }
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
-    
+
     projects.forEach(project => {
+        // Determine if project has a live view link
+        const hasViewLink = project.links.view !== "#";
+        const hasCodeLink = project.links.code !== "#";
+
+        // Create the appropriate button for viewing
+        const viewButton = hasViewLink
+            ? `<a href="${project.links.view}" class="btn" target="_blank">
+                 <i class="fas fa-external-link-alt"></i> View Live
+               </a>`
+            : `<a href="#" class="btn view-btn" data-img="/assets/images/projects/${project.image}.png" 
+                 data-title="${project.name}" data-desc="${project.desc}" 
+                 data-code="${project.links.code}">
+                 <i class="fas fa-image"></i> Image
+               </a>`;
+
+        // Create the code button
+        const codeButton = hasCodeLink
+            ? `<a href="${project.links.code}" class="btn" target="_blank">
+                 Code <i class="fas fa-code"></i>
+               </a>`
+            : '';
+
         projectsHTML += `
         <div class="grid-item ${project.category}">
           <div class="box tilt">
@@ -79,43 +120,49 @@ function showProjects(projects) {
               <div class="desc">
                 <p>${project.desc}</p>
                 <div class="btns">
-                  <a href="#" class="btn view-btn" data-img="/assets/images/projects/${project.image}.png" 
-                     data-title="${project.name}" data-desc="${project.desc}" 
-                     data-code="${project.links.code}">
-                    <i class="fas fa-eye"></i> View
-                  </a>
-                  <a href="${project.links.code}" class="btn" target="_blank">
-                    Code <i class="fas fa-code"></i>
-                  </a>
+                  ${viewButton}
+                  ${codeButton}
                 </div>
               </div>
             </div>
           </div>
         </div>`;
     });
-    
+
     projectsContainer.innerHTML = projectsHTML;
+
+    // Add click event listeners for modal view buttons
+    document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const imgSrc = this.getAttribute('data-img');
+            const title = this.getAttribute('data-title');
+            const desc = this.getAttribute('data-desc');
+            const codeLink = this.getAttribute('data-code');
+            openModal(imgSrc, title, desc, codeLink);
+        });
+    });
 
     // Initialize Isotope after projects are loaded
     var $grid = $('.box-container').isotope({
         itemSelector: '.grid-item',
         layoutMode: 'fitRows',
-        percentPosition: true,
-        masonry: {
-            columnWidth: '.grid-item'
+        percentPosition: false,
+        fitRows: {
+            gutter: 35  // 3.5rem gap between items
         }
     });
 
     // Filter items on button click
-    $('.button-group').on('click', 'button', function() {
+    $('.button-group').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
     });
 
     // Add active class to buttons
-    $('.button-group').each(function(i, buttonGroup) {
+    $('.button-group').each(function (i, buttonGroup) {
         var $buttonGroup = $(buttonGroup);
-        $buttonGroup.on('click', 'button', function() {
+        $buttonGroup.on('click', 'button', function () {
             $buttonGroup.find('.is-checked').removeClass('is-checked');
             $(this).addClass('is-checked');
         });

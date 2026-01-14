@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow specific directories if needed
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Sitemap location
+Sitemap: https://victoroki.github.io/portofolio/sitemap.xml

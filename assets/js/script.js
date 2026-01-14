@@ -37,22 +37,46 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- emailjs to mail contact form data -->
+    // Formspree contact form submission
     $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
         event.preventDefault();
+
+        var form = $(this);
+        var formData = form.serialize();
+        var submitButton = form.find('button[type="submit"]');
+        var originalButtonText = submitButton.html();
+
+        // Disable button and show loading state
+        submitButton.prop('disabled', true);
+        submitButton.html('Sending... <i class="fa fa-spinner fa-spin"></i>');
+
+        $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function (response) {
+                console.log('SUCCESS!', response);
+                form[0].reset();
+                alert("Message sent successfully! Thank you for contacting me.");
+                submitButton.prop('disabled', false);
+                submitButton.html(originalButtonText);
+            },
+            error: function (xhr, status, error) {
+                console.log('FAILED...', error);
+                if (xhr.status === 0) {
+                    // Form submitted successfully but CORS prevents reading response
+                    form[0].reset();
+                    alert("Message sent successfully! Thank you for contacting me.");
+                } else {
+                    alert("Form submission failed! Please try again or email me directly.");
+                }
+                submitButton.prop('disabled', false);
+                submitButton.html(originalButtonText);
+            }
+        });
     });
-    // <!-- emailjs to mail contact form data -->
+    // Formspree contact form submission end
 
 });
 
