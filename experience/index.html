@@ -1,223 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Experience | Victor Mongare</title>
+  <link id="favicon" rel="shortcut icon" href="../assets/images/hero2.png" type="image/x-png" />
 
-    <title>Experience | Portfolio Victor Mongare</title>
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
-<body oncontextmenu="return false">
 
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Victor</a>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+    <a href="../index.html" class="logo"><span class="terminal-prefix">&gt;_</span> Victor.M</a>
 
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="../skills/index.html">Skills</a></li>
+        <li><a class="active" href="./index.html">Experience</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <h2 class="heading">
+      <i class="fas fa-briefcase"></i> Work <span>Experience</span>
+    </h2>
+    <p class="sub-heading">A career track spanning full-stack development, cloud administration, network infrastructure, and DevOps engineering.</p>
+
+    <div class="timeline">
+      <!-- Role 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>Technical Lead</h3>
+              <div class="company">Garikon · Nairobi</div>
+            </div>
+            <div class="timeline-date">Sep 2025 - Current</div>
+          </div>
+          <div class="timeline-body">
             <ul>
-            <li><a href="/#home">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#skills">Skills</a></li>
-            <li><a href="/#education">Education</a></li>
-            <li><a href="/#work">Work</a></li>
-            <li><a class="active" href="/#experience">Experience</a></li>
-            <li><a href="/#contact">Contact</a></li>
+              <li>Lead development and ongoing administration of the Garikon School ERP, a SaaS platform, configuring role-based access control within its Academic Management dashboard to restrict views and permissions by user role.</li>
+              <li>Own master data structure and workflow configuration for client ERP deployments, working with client stakeholders to turn requirements into system configuration.</li>
+              <li>Manage AWS and GCP infrastructure, uptime, and automated deployments for multiple concurrent client systems, with a focus on reliability and cost efficiency.</li>
+              <li>Identify and pilot AI-enabled tools across development, content, and client delivery workflows to speed up reporting and routine tasks.</li>
+              <li>Handle vendor and client relationships end to end, including proposals, pricing negotiation, and ongoing technical account management.</li>
             </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-  <div class="quote">
-      <span>every experience in your life is being orchestrated to teach you something you need to know to move forward.</span>
-  </div>
-
-  <!-- <div class="timeline">
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Employed</h2>
+            <div class="timeline-tags">
+              <span class="tech-tag">SaaS ERP</span>
+              <span class="tech-tag">RBAC</span>
+              <span class="tech-tag">AWS · GCP</span>
+              <span class="tech-tag">Tech Lead</span>
+            </div>
+          </div>
         </div>
-        <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2023 - present</p>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>IT Systems Developer</h3>
+              <div class="company">Torchbearer Institute · Kiambu</div>
+            </div>
+            <div class="timeline-date">Jul 2025 - May 2026</div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Administered hosting, deployment, database backups, uptime monitoring, and environment configuration for the institute's full-stack management system.</li>
+              <li>Performed regular backup and recovery testing to support business continuity, and maintained and optimised MySQL databases underpinning core operations.</li>
+              <li>Handled bug fixes and system rectifications, coordinating with stakeholders on issue prioritisation and resolution timelines.</li>
+              <li>Managed configuration changes and updates on shared hosting infrastructure while keeping the live system stable for active users.</li>
+              <li>Provided ongoing technical support to institute staff, helping resolve day-to-day system issues.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">Full-Stack System</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Backups & Disaster Recovery</span>
+              <span class="tech-tag">Uptime Monitoring</span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>Backend Developer</h3>
+              <div class="company">Chesi Mobile · Nairobi</div>
+            </div>
+            <div class="timeline-date">Jul 2024 - Feb 2026</div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Architected and deployed backend services using Node.js and ExpressJS on AWS infrastructure (EC2, RDS, S3), supporting 100+ daily active users across Android and iOS platforms.</li>
+              <li>Built a Node.js warehouse management system and a Laravel-based loan management system, designing versioned REST APIs and managing PostgreSQL and MySQL databases.</li>
+              <li>Optimised SQL queries across MySQL and PostgreSQL, cutting average API response time by around 40%.</li>
+              <li>Implemented automated deployment workflows using CI/CD pipelines with GitHub Actions and Jenkins, reducing deployment time by 60%.</li>
+              <li>Integrated RFID readers and IoT devices with backend services for warehouse tracking and hardware-software communication.</li>
+              <li>Led incident response for production issues, running root cause analysis and documenting findings for the wider team.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">RFID Integration</span>
+              <span class="tech-tag">OAuth 2.0 / JWT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 4 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>DevOps Engineer</h3>
+              <div class="company">Zendawa Africa · Nakuru</div>
+            </div>
+            <div class="timeline-date">Feb 2025 - Jun 2025</div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Automated infrastructure provisioning with Infrastructure as Code, using Terraform and AWS CloudFormation.</li>
+              <li>Built and maintained CI/CD pipelines with Jenkins and GitHub Actions for application deployments.</li>
+              <li>Debugged and resolved critical system issues, improving application stability.</li>
+              <li>Developed Python and Bash scripts to automate routine maintenance tasks.</li>
+              <li>Configured Docker containers for consistent development and production environments.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">Terraform</span>
+              <span class="tech-tag">AWS CloudFormation</span>
+              <span class="tech-tag">Jenkins</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 5 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>Software Developer</h3>
+              <div class="company">Learnsoft Beliotech Solutions · Nairobi</div>
+            </div>
+            <div class="timeline-date">Sep 2024 - Jan 2025</div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Developed and maintained a school management ERP using PHP Laravel and MySQL, serving 200+ business users.</li>
+              <li>Participated in the full development lifecycle following Agile practices, from requirements gathering through deployment.</li>
+              <li>Built reusable code and libraries following MVC architecture, and performed code reviews and performance optimisations that improved application load time by around 30%.</li>
+              <li>Prepared system specifications outlining technical requirements and recommended solutions.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Agile / Scrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 6 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>Freelance Full Stack Developer</h3>
+              <div class="company">Hadria Ecommerce Website · Mombasa</div>
+            </div>
+            <div class="timeline-date">May 2024 - Jul 2024</div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Developed a full-stack ecommerce platform using PHP Laravel (backend) and JavaScript, HTML/CSS, Bootstrap (frontend) with MVC architecture.</li>
+              <li>Implemented the Safaricom M-Pesa Daraja API for payment transactions and order processing.</li>
+              <li>Designed and optimised MySQL database solutions for product catalogs, shopping carts, user profiles, and transaction data.</li>
+              <li>Built a responsive front-end interface and delivered the project within the agreed deadline.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">M-Pesa Daraja API</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Responsive UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 7 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-title">
+              <h3>AWS Cloud Practitioner Trainee</h3>
+              <div class="company">AWS re/Start Programme · Remote</div>
+            </div>
+            <div class="timeline-date">May 2024 - Aug 2024</div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Launched and configured EC2 instances with custom security groups, implementing controls to restrict access.</li>
+              <li>Designed VPC architecture with public/private subnets, load balancers, and NAT gateways for high-availability web applications.</li>
+              <li>Configured Amazon RDS with auto-scaling and implemented backup strategies.</li>
+              <li>Managed static website hosting on Amazon S3 with bucket policies and CloudFront integration.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">AWS EC2</span>
+              <span class="tech-tag">VPC Design</span>
+              <span class="tech-tag">Amazon RDS</span>
+              <span class="tech-tag">S3 · CloudFront</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-box">
+        <div class="footer-logo">
+          <span class="terminal-prefix">&gt;_</span> Victor Mongare
+        </div>
+        <p>Full-stack engineer and IT systems generalist from Nairobi, Kenya.</p>
+      </div>
+
+      <div class="footer-box">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="../about/index.html"><i class="fas fa-chevron-right"></i> About</a></li>
+          <li><a href="../skills/index.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+          <li><a href="./index.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+          <li><a href="../projects/index.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          <li><a href="../contact/index.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-phone-alt"></i> +254 115 560 927</p>
+        <p><i class="fas fa-envelope"></i> okiomeriv@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
       </div>
     </div>
 
-    <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>DevIncept (Top Contributor)</h2>
-          </div>
-          <div class="desc">
-              <h3>DCP 2021 Contributor | Open Source Program</h3>
-              <p>July 2021 - October 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>LetsGrowMore Summer of Code</h2>
-          </div>
-          <div class="desc">
-              <h3>LGM-SOC'21 Participant | Open Source Program</h3>
-              <p>June 2021 - August 2021</p>
-          </div>
-        </div>
-      </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Mapstreak Flyseas</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
-        </div>
-      </div>
+    <div class="credit">
+      <span>Built by <a href="https://github.com/victoroki" target="_blank" rel="noopener">Victor Mongare</a></span>
     </div>
+  </footer>
 
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
-        </div>
-      </div>
-    </div>
+  <!-- Scroll Top Button -->
+  <div id="scroll-top" class="fas fa-angle-up"></div>
 
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Mobile Application Developer | Internship</h3>
-            <p>April 2021 - May 2021</p>
-        </div>
-      </div>
-    </div>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#menu').click(function () {
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('nav-toggle');
+      });
 
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Frshr Technologies</h2>
-        </div>
-        <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
+      $(window).on('scroll load', function () {
+        if (window.scrollY > 60) {
+          document.querySelector('#scroll-top').classList.add('active');
+        } else {
+          document.querySelector('#scroll-top').classList.remove('active');
+        }
 
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>WonderingBlog</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const progressEl = document.getElementById('scrollProgress');
+        if (progressEl) {
+          progressEl.style.width = scrolled + '%';
+        }
+      });
 
-    <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Hacktoberfest 2020</h2>
-          </div>
-          <div class="desc">
-              <h3>Contributor | Open Source Program</h3>
-              <p>October 2020 - November 2020</p>
-          </div>
-        </div>
-      </div>
-
-  </div> -->
-
-  <div class="morebtn">
-    <a href="/#experience" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-  </a>
-  </div>
-
-</div>
-</section>
-<!-- experience section ends -->
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Victor's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-phone"></i>+254 115560**7</p>
-          <p> <i class="fas fa-envelope"></i>okiomeriv@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Nairobi, Kenya</p>
-          <div class="share">
-
-            <a href="https://www.linkedin.com/in/victor-mongare" class="fab fa-linkedin" target="_blank"></a>
-            <a href="https://github.com/victoroki" class="fab fa-github" target="_blank"></a>
-            <a href="mailto:okiomeriv@gmail.com" class="fas fa-envelope" target="_blank"></a>
-            <a href="https://twitter.com/Victor_tum_ke" class="fab fa-twitter" target="_blank"></a>
-            <!-- <a href="https://t.me/f5" class="fab fa-telegram-plane" target="_blank"></a> -->
-          </div>
-      </div>
-  </div>
-
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/victor-mongare"> Victor okiomeri</a></h1>
-
-</section>
-<!-- footer section ends -->
-
-<!-- scroll top btn -->
-<a href="#experience" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./script.js"></script>
-
+      $('#scroll-top').click(function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
+
 </html>

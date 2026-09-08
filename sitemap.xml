@@ -7,25 +7,49 @@
   <!-- Homepage -->
   <url>
     <loc>https://victoroki.github.io/portofolio/</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Projects Page -->
+  <!-- About Page -->
   <url>
-    <loc>https://victoroki.github.io/portofolio/projects/</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://victoroki.github.io/portofolio/about/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Skills Page -->
+  <url>
+    <loc>https://victoroki.github.io/portofolio/skills/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Experience Page -->
   <url>
     <loc>https://victoroki.github.io/portofolio/experience/</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://victoroki.github.io/portofolio/projects/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://victoroki.github.io/portofolio/contact/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

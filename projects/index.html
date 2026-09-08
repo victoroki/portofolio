@@ -1,124 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      id="favicon"
-      rel="shortcut icon"
-      href="/assets/images/favicon.png"
-      type="image/x-png"
-    />
-    <title>Projects | Portfolio Victor Mongare</title>
-  </head>
-  <body oncontextmenu="return false">
-    <!-- navbar starts -->
-    <header>
-      <a href="/" class="logo"><i class="fab fa-node-js"></i> Victor</a>
 
-      <div id="menu" class="fas fa-bars"></div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#skills">Skills</a></li>
-          <li><a href="/#education">Education</a></li>
-          <li><a class="active" href="/#work">Work</a></li>
-          <li><a href="/#experience">Experience</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- navbar ends -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Victor Mongare</title>
+  <meta name="title" content="Projects | Victor Mongare" />
+  <meta name="description"
+    content="Production web platforms, ERP software, cloud architectures, and machine learning microservices engineered by Victor Mongare." />
+  <link id="favicon" rel="shortcut icon" href="../assets/images/hero2.png" type="image/x-png" />
 
-    <!-- work project section starts -->
-    <section class="work" id="work">
-      <h2 class="heading">
-        <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
-      </h2>
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
 
-      <div id="filters" class="button-group">
-        <button class="btn is-checked" data-filter="*">All Projects</button>
-        <button class="btn" data-filter=".php">PHP Projects</button>
-        <button class="btn" data-filter=".laravel">Laravel Projects</button>
-        <button class="btn" data-filter=".react">React Projects</button>
-        <button class="btn" data-filter=".python">Python Projects</button>
-        <button class="btn" data-filter=".basic-web">Basic Web</button>
+<body>
+  <!-- Header / Minimal Sticky Navbar with Scroll Progress -->
+  <header>
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+    <a href="../index.html" class="logo">
+      <span class="terminal-prefix">&gt;_</span> Victor.M
+    </a>
+
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="../skills/index.html">Skills</a></li>
+        <li><a href="../experience/index.html">Experience</a></li>
+        <li><a class="active" href="./index.html">Projects</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="work" id="work">
+    <div style="text-align: center;">
+      <h1 class="heading">
+        Featured <span>Engineering Projects</span>
+      </h1>
+      <p class="sub-heading">
+        Production web platforms, ERP systems, cloud deployments, and ML services. Each one with its real stack and what it shipped.
+      </p>
+    </div>
+
+    <!-- Dev CLI / Terminal Search & Filters -->
+    <div class="project-controls">
+      <div class="project-search-box">
+        <span class="cli-prompt">$</span>
+        <input type="text" id="projectSearch" placeholder="Search architecture, stack (e.g. Laravel, React, AWS)..." />
+        <span class="kbd-hint">/</span>
       </div>
 
-      <div class="box-container">
-        <!-- Projects will be loaded here dynamically -->
+      <!-- Isotope Filters -->
+      <div id="filters" class="filter-buttons">
+        <button class="filter-btn is-checked" data-filter="*">All Systems <span class="count">12</span></button>
+        <button class="filter-btn" data-filter=".laravel">Laravel</button>
+        <button class="filter-btn" data-filter=".react">React</button>
+        <button class="filter-btn" data-filter=".python">Python / AI</button>
+        <button class="filter-btn" data-filter=".php">PHP / IoT</button>
+        <button class="filter-btn" data-filter=".basic-web">Web Platforms</button>
       </div>
+    </div>
 
-      <div class="backbtn">
-        <a href="/" class="btn">
-          <i class="fas fa-arrow-left"></i>
-          <span>Back to Home</span>
+    <!-- Bento Projects Grid Container -->
+    <div class="box-container projects-grid">
+      <!-- Dynamically loaded via script.js -->
+    </div>
+
+    <!-- Featured Callout Banner: "Open Source Repositories & DevOps" -->
+    <div class="github-callout-banner">
+      <div class="banner-text">
+        <h3>More repositories, APIs &amp; cloud scripts</h3>
+        <p>CI/CD setups, Dockerfiles, and infra automation scripts are on GitHub.</p>
+      </div>
+      <div class="banner-actions">
+        <a href="https://github.com/victoroki" target="_blank" class="btn">
+          <i class="fab fa-github"></i>
+          <span>View GitHub Repositories</span>
+        </a>
+        <a href="../contact/index.html" class="btn btn-secondary">
+          <span>Get in touch</span>
+          <i class="fas fa-arrow-right"></i>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Project Modal -->
-    <div id="projectModal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <img id="modalImage" src="" alt="Project Screenshot">
-        <div class="modal-info">
-          <h3 id="modalTitle"></h3>
-          <p id="modalDesc"></p>
-          <p id="notDeployedMsg" class="not-deployed">Note: This project is not currently deployed</p>
-          <div class="modal-links">
-            <a id="modalCodeLink" href="#" class="btn" target="_blank">View Code <i class="fas fa-code"></i></a>
-          </div>
+  <!-- Project Detail Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-media">
+        <img id="modalImage" src="" alt="Project Screenshot" />
+      </div>
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <div id="modalImpact" class="modal-impact-banner"></div>
+        <p id="modalDesc"></p>
+        
+        <div class="modal-meta-section">
+          <span class="modal-section-label">Tech stack</span>
+          <div id="modalTags" class="project-tags-list"></div>
+        </div>
+
+        <div class="modal-meta-section" id="modalMetricsWrapper">
+          <span class="modal-section-label">Highlights</span>
+          <div id="modalMetrics" class="case-metrics-strip"></div>
+        </div>
+
+        <p id="notDeployedMsg" style="display:none; color: var(--secondary-accent); font-family: var(--font-mono); font-size: 1.3rem; margin: 1.6rem 0; font-weight: 500;">
+          <i class="fas fa-shield-alt"></i> Private client project, not publicly deployed
+        </p>
+
+        <div class="modal-links">
+          <a id="modalLiveLink" href="#" class="btn" target="_blank" style="display:none;">
+            <i class="fas fa-external-link-alt"></i> Open Live Platform
+          </a>
+          <a id="modalCodeLink" href="#" class="btn btn-secondary" target="_blank" style="display:none;">
+            <i class="fab fa-github"></i> View Repository Code
+          </a>
         </div>
       </div>
     </div>
-    <!-- work project section ends -->
+  </div>
 
-    <!-- scroll top btn -->
-    <a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
-    <!-- scroll back to top -->
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-box">
+        <div class="footer-logo">
+          <span class="terminal-prefix">&gt;_</span> Victor Mongare
+        </div>
+        <p>Full-stack engineer and IT systems administrator. I build reliable platforms and keep the infrastructure behind them secure.</p>
+      </div>
 
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-    <!-- jquery cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+      <div class="footer-box">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="../about/index.html"><i class="fas fa-chevron-right"></i> About</a></li>
+          <li><a href="../skills/index.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+          <li><a href="../experience/index.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+          <li><a href="./index.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          <li><a href="../contact/index.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- vanilla tilt.js links -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-      integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+      <div class="footer-box">
+        <h3>Direct Contact</h3>
+        <p><i class="fas fa-phone-alt"></i> +254 115 560 927</p>
+        <p><i class="fas fa-envelope"></i> okiomeriv@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      </div>
+    </div>
 
-    <!-- scroll reveal anim -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="credit">
+      <span>Built by <a href="https://github.com/victoroki" target="_blank" rel="noopener">Victor Mongare</a></span>
+    </div>
+  </footer>
 
-    <!-- isotope filter plugin cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-      integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- Scroll Top Button -->
+  <div id="scroll-top" class="fas fa-angle-up"></div>
 
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+  <script src="./script.js"></script>
+</body>
 
-    <script src="./script.js"></script>
-  </body>
 </html>
